@@ -75,6 +75,10 @@ eval "$(starship init zsh)"
 plugins=(
     git
     zsh-autosuggestions
+    zsh-syntax-highlighting
+    aws
+    docker-compose 
+    dotenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,4 +117,4 @@ eval "$(pyenv init -)"
 
 # autocomplete config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bold"
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)source /Users/kaisun.raj1/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
