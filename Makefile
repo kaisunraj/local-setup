@@ -1,5 +1,5 @@
 push:
 	cp ~/.zshrc ./.zshrc
 	git add .
-	git commit -m ""
+	git commit -m "updating .zshrc"
 	git push
