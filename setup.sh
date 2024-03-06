@@ -20,3 +20,14 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 # install fd
 
 brew install fd
+
+# install pyenv
+
+brew install pyenv
+pyenv install 3.10.6
+pyenv global 3.10.6
+
+# install poetry
+
+pip install --user poetry
+

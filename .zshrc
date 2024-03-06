@@ -75,7 +75,6 @@ eval "$(starship init zsh)"
 plugins=(
     git
     zsh-autosuggestions
-    zsh-syntax-highlighting
     aws
     docker-compose 
     dotenv
@@ -118,3 +117,50 @@ eval "$(pyenv init -)"
 # autocomplete config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bold"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)source /Users/kaisun.raj1/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# for poetry
+export PATH="$HOME/.local/bin:$PATH"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kaisun.raj1/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kaisun.raj1/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kaisun.raj1/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kaisun.raj1/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# JS Proxies On and Off
+proxy_off() {
+unset http_proxy
+unset https_proxy
+unset no_proxy
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset NO_PROXY
+unset VAGRANT_HTTP_PROXY
+unset VAGRANT_HTTPS_PROXY
+unset VAGRANT_APT_PROXY
+unset VAGRANT_GIT_PROXY
+unset VAGRANT_NO_PROXY
+}
+proxy_on() {
+export HTTP_PROXY=http://a-proxy-p.bc.jsplc.net:8080
+export HTTPS_PROXY=http://a-proxy-p.bc.jsplc.net:8080
+export NO_PROXY=localhost,127.0.0.1,.dev,.internal,.local,.jsplc.net,.jstest1.net,.jstest2.net,.jstest3.net,.devjsplc.net,.jhblkf.jsgrp,.blk.js.com,.ishapay.net,.iphapay.net,.client.secure-payment-processing.com,.client.test-secure-payment-processing.com,.sfc-ie-ds1-customer-stage.s3.eu-west-1.amazonaws.com
+# Some tools want the variables in lowercase
+export http_proxy=$HTTP_PROXY
+export https_proxy=$HTTPS_PROXY
+export no_proxy=$NO_PROXY
+# Proxy config for vagrant-proxyconf
+export VAGRANT_HTTP_PROXY=$HTTP_PROXY
+export VAGRANT_HTTPS_PROXY=$HTTPS_PROXY
+export VAGRANT_APT_PROXY=$HTTP_PROXY
+export VAGRANT_GIT_PROXY=$HTTP_PROXY
+export VAGRANT_NO_PROXY=$NO_PROXY
+}
