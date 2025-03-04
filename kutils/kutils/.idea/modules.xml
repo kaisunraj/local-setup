@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/local-setup.iml" filepath="$PROJECT_DIR$/.idea/local-setup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kutils.iml" filepath="$PROJECT_DIR$/.idea/kutils.iml" />
     </modules>
   </component>
 </project>
